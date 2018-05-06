@@ -37,22 +37,26 @@
                 y: y
             };
         },
-        docEl = !!navigator.userAgent.match(/firefox/i) || navigator.msPointerEnabled ? d.documentElement : body;
+        docEl = !!navigator.userAgent.match(/firefox/i) || navigator.msPointerEnabled ? d.documentElement : body,
+        rootScrollTop = function () {
+            return d.documentElement.scrollTop || d.body.scrollTop;
+        };
 
     var Blog = {
         goTop: function (end) {
-            var top = docEl.scrollTop;
-            var interval = arguments.length > 2 ? arguments[1] : Math.abs(top - end) / scrollSpeed;
+            // var top = rootScrollTop();
+            // var interval = arguments.length > 2 ? arguments[1] : Math.abs(top - end) / scrollSpeed;
 
-            if (top && top > end) {
-                docEl.scrollTop = Math.max(top - interval, 0);
-                animate(arguments.callee.bind(this, end, interval));
-            } else if (end && top < end) {
-                docEl.scrollTop = Math.min(top + interval, end);
-                animate(arguments.callee.bind(this, end, interval));
-            } else {
-                this.toc.actived(end);
-            }
+            // if (top && top > end) {
+            //     docEl.scrollTop = Math.max(top - interval, 0);
+            //     animate(arguments.callee.bind(this, end, interval));
+            // } else if (end && top < end) {
+            //     docEl.scrollTop = Math.min(top + interval, end);
+            //     animate(arguments.callee.bind(this, end, interval));
+            // } else {
+            //     this.toc.actived(end);
+            // }
+            jQuery("html,body").animate({ scrollTop: end || 0 }, 500);
         },
         toggleGotop: function (top) {
             if (top > w.innerHeight / 2) {
@@ -71,7 +75,7 @@
                     menu.classList.add('show');
 
                     if (isWX) {
-                        var top = docEl.scrollTop;
+                        var top = rootScrollTop();
                         main.classList.add('lock');
                         main.scrollTop = top;
                     } else {
@@ -144,8 +148,7 @@
                 el.addEventListener('click', function (e) {
                     e.preventDefault();
                     var top = offset($('[id="' + decodeURIComponent(this.hash).substr(1) + '"]')).y - headerH;
-                    // animate(Blog.goTop.bind(Blog, top));
-                    docEl.scrollTop = top;
+                    Blog.goTop(top + 30);
                 })
             });
 
@@ -440,7 +443,7 @@
 
     w.addEventListener('load', function () {
         Blog.waterfall();
-        var top = docEl.scrollTop;
+        var top = rootScrollTop();
         Blog.toc.fixed(top);
         Blog.toc.actived(top);
         loading.classList.remove('active');
@@ -506,7 +509,7 @@
 
     var top = 0;
     d.addEventListener('scroll', function () {
-        top = docEl.scrollTop;
+        top = rootScrollTop();
         Blog.count++;
         if (Blog.count % 8 === 0 && top > header.clientHeight * 3) {
             Blog.toggleGotop(top);
@@ -534,17 +537,17 @@
     header.style.opacity = 1;
     Blog.noop = noop;
     Blog.even = even;
-    Blog.fixedHeaderStart = window.innerHeight - 100;
-    Blog.cacheTop = 0;
-    Blog.cacheStart = window.innerHeight - 100;
-    Blog.cacheEnd = 0;
+    Blog.fixedHeaderStart = window.innerHeight - 50;
+    Blog.cacheTop = window.innerHeight - 50;
+    Blog.cacheStart = window.innerHeight - 50;
+    Blog.cacheEnd = window.innerHeight - 50;
     Blog.cacheOpacity = 1;
     Blog.LEN = 640;
     Blog.count = 0;           // 控制滚动条频率
     Blog.$ = $;
     Blog.$$ = $$;
 
-    Blog.fixedHeader(docEl.scrollTop);
+    Blog.fixedHeader(rootScrollTop());
 
     // 3.5 秒后隐藏菜单栏
     setTimeout(function () {
