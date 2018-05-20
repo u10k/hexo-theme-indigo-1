@@ -69,7 +69,7 @@
 
                 return tpl(searchTpl, {
                     title: post.title,
-                    path: (G.BLOG.ROOT + '/' + post.path).replace(/\/{2}/g, '/'),
+                    path: (post.path).replace(/\/{2}/g, '/'),
                     date: new Date(post.date).toLocaleDateString(),
                     tags: post.tags.map(function (tag) {
                         return '<span>#' + tag.name + '</span>';
@@ -77,7 +77,6 @@
                 });
 
             }).join('');
-
         } else {
             html = '<li class="tips"><i class="icon icon-coffee icon-3x"></i><p>Results not found!</p></li>';
         }
