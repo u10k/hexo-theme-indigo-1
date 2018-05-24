@@ -29,19 +29,22 @@ menu:
     url: /categories/ES6
   user:
     text: 关于
-    url: /other/about.html
+    url: /menu/about.html
   share:
     text: 干货
-    url: /other/share.html
+    url: /menu/share.html
   # star:
   #   text: 读书
-  #   url: /other/study.html
+  #   url: /menu/study.html
+  star:
+    text: 计划
+    url: /menu/plan.html
   book:
     text: Gitbook
-    url: /other/book.html
+    url: /menu/book.html
   google:
     text: Npm
-    url: /other/npm.html
+    url: /menu/npm.html
   github:
     url: https://github.com/lizhooh
     target: _blank

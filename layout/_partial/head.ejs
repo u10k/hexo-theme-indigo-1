@@ -1,8 +1,4 @@
 <head>
-    <!--<%- partial('plugins/google-analytics') %>
-    <%- partial('plugins/tajs') %>
-    <%- partial('plugins/baidu') %>
-    -->
     <meta charset="utf-8">
     <meta name="referrer" content="never">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -39,8 +35,6 @@
         }
     %>
     <title><% if (title){ %><%= title %> | <% } %><%= config.title %> | <%= config.subtitle.replace(/<[^>]*>/g, '') %></title>
-
-
     <%
         var keyWords = config.keywords;
         if(page.tags){
@@ -60,9 +54,7 @@
     <%- favicon_tag(theme.favicon) %>
     <link rel="stylesheet" href="<%= url_for('/css/style.css?v='+ theme_version()) %>">
 
-    <% if(!cache) { %>
-        <!--<script src="<%- url_for('/js/vconsole.min.js') %>"></script> -->
-    <% } %>
+    <!--<script src="<%- url_for('/js/vconsole.min.js') %>"></script> -->
     <script>
         window.lazyScripts=[];
     </script>
@@ -79,13 +71,9 @@
                 reIE.test(userAgent);
                 var fIEVersion = parseFloat(RegExp["$1"]);
                 return fIEVersion >= 7 && fIEVersion <= 10 ? fIEVersion : 6;
-            } else if (isEdge) {
+            }
+            else {
                 return -1;
-                // return 'edge';          // edge
-            } else if (isIE11) {
-                return 11;              // IE11
-            } else {
-                return -1;              // 不是ie浏览器
             }
         }
 
@@ -93,5 +81,5 @@
             var text = '检测到你使用的是 IE ' + IEVersion() + ' 内核浏览器，本博客使用了最新的前端技术，为了获得最佳的体验，请使用 Chrome、Opera、Firefox 等现代浏览器打开。';
             alert(text)
         }
-    </script>
+</script>
 </head>
