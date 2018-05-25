@@ -1,11 +1,11 @@
 # hexo-theme-indigo
-# https://github.com/lizhoohyscoder/hexo-theme-indigo
+# https://github.com/dinphy/hexo-theme-indigo
 
 # 关键字
-keyWords: Lizhooh 的博客，我的博客，我来作主 <br /> 专注于研究：Web 前端开发，Nodejs 后端开发，混合式移动应用开发，Javascript 全栈式开发，数据挖掘与可视化 等技术。
+keyWords: Dinphy 的博客，我的博客，我来作主 <br /> 专注于研究：Web 前端开发，Nodejs 后端开发，混合式移动应用开发，Javascript 全栈式开发，数据挖掘与可视化 等技术。
 
 # 额外的信息
-author: Lizhooh
+author: Dinphy
 career: 大前端开发工程师
 summary: 温故而知新，可以为师矣。
 
@@ -66,7 +66,7 @@ avatar: /img/my.png
 favicon: /favicon.ico
 
 # email
-email: lizhoohs@foxmail.com
+email: 2027821710@qq.com
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: #33AAFF
