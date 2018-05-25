@@ -157,6 +157,9 @@ article.article-card .post-title-link {
     text-align: center;
 
     .inner {
+        padding: 0 12px;
+        background-color: #fff;
+        border-radius: 3px;
         display: inline-block;
     }
 
@@ -164,12 +167,14 @@ article.article-card .post-title-link {
     span {
         display: inline-block;
         line-height: 34px;
-        padding: 0 1em;
+        // padding: 0 1em;
+        padding: 4px 12px;
         margin: 0 2px;
         font-size: 14px;
         color: @secondaryTextColor;
         border-radius: 3px;
         overflow: hidden;
+        border-radius: 0;
         .transition(.4s);
     }
 
@@ -179,9 +184,9 @@ article.article-card .post-title-link {
     }
 
     .current {
-        color: #fff;
-        background-color: lighten(@primaryColor, 10%);
-        border-radius: 100%;
+        color: @primaryColor;
+        background-color: rgba(0, 0, 0, .07);
+        // border-radius: 100%;
         text-shadow: 1px 2px 2px rgba(1, 1, 1, .36);
     }
 

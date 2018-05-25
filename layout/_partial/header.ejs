@@ -27,7 +27,7 @@
         <% } %>
     </div>
 </header>
-<header class="content-header <%-hdClass %>">
+<header class="content-header <%-hdClass %>" style="<%- page.image && "background-image: url('" +  page.image + "');" %>">
 
     <!--<div class="container fade-scale">-->
     <div class="container" id="container-header">
@@ -40,6 +40,7 @@
                 <div>
                     <span class="name"><%- theme.author %></span>
                     <span class="summary"><%- theme.career %></span>
+                    <span class="summary"><%- theme.summary %></span>
                 </div>
             </section>
         </div>

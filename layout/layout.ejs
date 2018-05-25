@@ -51,6 +51,7 @@
                     return;
                 }
 
+                <% if (theme.music) { %>
                 var $ = document.querySelector.bind(document);
                 var music = $('#music');
                 var timer1 = 0, timer2 = 0;
@@ -62,7 +63,6 @@
                 if (!store[index]) return;
                 var id = store[index].id;
                 var type = store[index].type;
-
 
                 var node = document.createElement('iframe');
                 node.frameBorder = 'no';
@@ -84,7 +84,7 @@
                         music.style['display'] = 'none';
                     }
                 }
-
+                // 安装
                 setTimeout(function () {
                     music.appendChild(node);
                     setTimeout(function () {
@@ -108,6 +108,8 @@
                         music.classList.remove('min-music');
                     }, 1000);
                 }
+
+                <% } %>
             }
             window.onload = load;
         } ();

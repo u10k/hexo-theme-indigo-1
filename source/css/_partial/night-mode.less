@@ -311,7 +311,7 @@
     }
     //////////////// 主页 /////////////////
     .post-list {
-        box-shadow: 2px 3px 12px rgba(1, 1, 1, 0.36);
+        // box-shadow: 2px 3px 12px rgba(1, 1, 1, 0.36);
 
         li > article {
             background: #353535;
@@ -358,6 +358,20 @@
         &:hover {
             box-shadow: 0 2px 18px rgba(1, 1, 1, 0.46);
         }
+    }
+
+    #page-nav {
+        .inner {
+            background-color: #444;
+        }
+        a, span {
+            color: #aaa;
+        }
+        .current {
+            background-color: rgba(1, 1, 1, 0.25);
+            color: #ddd;
+        }
+
     }
 }
 @media screen and (max-width:760px) {

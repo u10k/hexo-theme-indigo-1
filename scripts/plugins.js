@@ -1,15 +1,29 @@
 const version = require('../package.json').version
+const cheerio = require('cheerio');
+const condenseWhitespace = require('condense-whitespace');
+
 hexo.extend.helper.register('theme_version', () => version)
 
+hexo.extend.helper.register('filterHTML', (html = '') => {
+    const $ = cheerio.load(html);
+    let text = condenseWhitespace($('*').text());
+    if (text.slice(0, 2) === '前言') text = text.slice(2);
+    if (text.length > 150) {
+        return text.slice(0, 150) + '...';
+    }
+    return text;
+})
 
 function renderImage(src, alt = '', title = '') {
-    return `<figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
-                    <img src="${src}" alt="${alt}" title="${title}">
-                </div>
-                <div class="image-caption">${title || alt}</div>
-            </figure>`
+    return `
+        <figure class="image-bubble">
+            <div class="img-lightbox">
+                <div class="overlay"></div>
+                <img src="${src}" alt="${alt}" title="${title}">
+            </div>
+            <div class="image-caption">${title || alt}</div>
+        </figure>
+    `;
 }
 
 hexo.extend.tag.register('image', ([src, title]) => {

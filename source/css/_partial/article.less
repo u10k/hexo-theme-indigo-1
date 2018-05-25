@@ -130,16 +130,34 @@
 
 .post-nav {
     margin-top: 30px;
-    padding: 16px 0 0;
+    padding: 0;
+    background: url(@bg-url) center center no-repeat;
+    background-size: cover;
+    border-radius: 3px;
 
     .next,
     .prev {
-        width: 47%;
-        // background: @codeBg;
-    }
+        background-color: rgba(0, 0, 0, .38);
+        border-radius: 2px;
+        width: 50%;
+        padding-top: 30px;
+        padding-bottom: 8px;
+        text-align: justify;
+        transition: all 0.3s ease-in-out;
+        &::after {
+            display: inline-block ;
+            content: '';
+            padding-left: 100%;
+        }
 
-    .next {
-        text-align: right;
+        .tips, a {
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .64);
+            box-shadow: 0 0 30px rgba(0, 0, 0, .24) inset;
+        }
     }
 }
 
@@ -149,8 +167,23 @@
     font-size: 16px;
     padding: 10px 16px;
 
+    & *, & *:hover {
+        text-decoration: none !important;
+        border: none !important;
+    }
+
     .title {
-        .hoverLine(@primaryColor);
+        text-align: center;
+        // .hoverLine(@primaryColor);
+    }
+
+    .summary {
+        text-indent: 2em;
+        margin-top: 10px;
+        color: #bcbebf;
+        font-size: 13px;
+        text-decoration: none;
+        line-height: 1.45;
     }
 
     .icon {
@@ -408,7 +441,7 @@
         // border-top-right-radius: 0;
         // border-bottom-left-radius: 0;
         font-family: @font-code;
-        box-shadow: 1px 2px 12px rgba(1, 1, 1, 0.12);
+        box-shadow: 1px 2px 4px rgba(1, 1, 1, 0.12);
         position: relative;
         // border: 2px solid #e5e5e5;
 
@@ -584,12 +617,14 @@
         padding: 0;
         margin-left: -16px;
         margin-right: -16px;
+        background: url(@bg-url-min) no-repeat;
 
         .next,
         .prev {
             width: 50%;
-            background: #fff;
-            box-shadow: @boxShadow;
+            // box-shadow: @boxShadow;
+            padding-top: 30px;
+            padding-bottom: 20px;
         }
 
         h4 {
