@@ -106,7 +106,14 @@ toc:
   list_number: true  # 是否显示数字排序
 
 # 文章页版权声明内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
-copyright: <br /><b style="color:#f66">版权声明</b> - Lizhooh，未经允许禁止转载！！！经允许的请声明：<div style='height:8px'></div><b>作者</b>：Lizhooh 前端开发工程师<br /><b>原文</b>：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- url.replace(/index\.html$/, '') %></a>
+#copyright: <br /><b style="color:#f66">版权声明</b> - Lizhooh，未经允许禁止转载！！！经允许的请声明：<div style='height:8px'></div><b>作者</b>：Lizhooh 前端开发工程师<br /><b>原文</b>：<a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_blank" rel="external"><%- url.replace(/index\.html$/, '') %></a>
+
+# Post License | 在每篇文章的结尾添加你的版权说明
+# You can specify the text you want to show in the end of your posts and pages, HTML tag is supported.
+#   For example, you can setup a CC license as:
+#       'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
+# You can also use Front-Matter `license` to override this setting.
+license: "<b>本文采用：署名-非商业性使用-禁止演绎 4.0 国际</b> 协议进行许可，阅读 <a rel='nofollow noopener' href='https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh' target='_blank'>相关说明</a>"
 
 # 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
 cnzz: false
