@@ -24,31 +24,31 @@ menu:
     url: /archives
   tags:
     text: 标签
-    url: /tags/ES6-ES2015/
+    url: /tags
   th-list:
     text: 分类
-    url: /categories/ES6
+    url: /categories
   user:
     text: 关于
     url: /menu/about.html
-  share:
-    text: 干货
-    url: /menu/share.html
+  #share:
+  #  text: 干货
+  #  url: /menu/share.html
   # star:
   #   text: 读书
   #   url: /menu/study.html
-  star:
-    text: 计划
-    url: /menu/plan.html
-  book:
-    text: Gitbook
-    url: /menu/book.html
-  google:
-    text: Npm
-    url: /menu/npm.html
-  github:
-    url: https://github.com/lizhooh
-    target: _blank
+  #star:
+  #  text: 计划
+  #  url: /menu/plan.html
+  #book:
+  #  text: Gitbook
+  #  url: /menu/book.html
+  #google:
+  #  text: Npm
+  #  url: /menu/npm.html
+  #github:
+  #  url: https://github.com/lizhooh
+  #  target: _blank
   # car:
   #   text: 'Devhint'
   #   url: https://devhints.io/
