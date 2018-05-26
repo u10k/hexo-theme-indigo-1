@@ -2,12 +2,12 @@
 # https://github.com/dinphy/hexo-theme-indigo
 
 # 关键字
-keyWords: Dinphy 的博客，我的博客，我来作主 <br /> 专注于研究：Web 前端开发，Nodejs 后端开发，混合式移动应用开发，Javascript 全栈式开发，数据挖掘与可视化 等技术。
+keyWords: Dinphy 的网站，我的博客，我来作主 <br /> 教师的业余生活，快乐的人生。
 
 # 额外的信息
 author: Dinphy
-career: 大前端开发工程师
-summary: 温故而知新，可以为师矣。
+career: 一枚教师，不懂教学
+summary: 学无先后，达者为师
 
 # 添加新菜单项遵循以下规则
 # menu:
@@ -26,7 +26,7 @@ menu:
     text: 标签
     url: /tags
   th-list:
-    text: 分类
+    text: 文章分类
     url: /categories
   user:
     text: 关于
