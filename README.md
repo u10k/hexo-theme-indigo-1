@@ -20,3 +20,6 @@ Material Design 风格的 Hexo 主题，基于 Hexo 3.0+ 制作。 [Preview](htt
 ```bash
 npm install --save hexo-wordcount
 ```
+
+## all dependence
+> npm install --save cheerio condense-whitespace hexo hexo-autoprefixer hexo-deployer-git hexo-generator-archive hexo-generator-category hexo-generator-feed hexo-generator-index hexo-generator-json-content hexo-generator-tag hexo-helper-qrcode hexo-renderer-ejs hexo-renderer-less hexo-renderer-marked hexo-renderer-stylus hexo-server hexo-symbols-count-time hexo-wordcount
