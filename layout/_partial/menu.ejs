@@ -12,7 +12,17 @@
 			  <h5 class="nickname"><%- config.author %></h5>
 			  <%- mail_to(theme.email, theme.email, {class: 'mail'}) %>
 
-			  <div style="margin-top: 5px; font-size: 92%"><b><%- site.posts.length %> 篇文章，共 <%- totalcount(site) %> 字</b></div>
+			  <div style="margin-top: 5px; margin-bottom: 5px; font-size: 92%"><b>文章共 <%- site.posts.length %> 篇，约 <%- totalcount(site) %> 字</b></div>
+				<%
+				  for (var i in theme.socail) {
+					link = theme.socail[i];
+				%>
+					<li class="waves-block socail-icon %>">
+					  <a href="<%- url_for(link) %>" target="_blank">
+						<i class="icon icon-lg icon-<%= i %>" aria-hidden="true"></i>
+					  </a>
+					</li>
+				<% } %>
 			</hgroup>
 		  </div>
 		</div>
@@ -70,9 +80,6 @@
 						</a>
 					</li>
 				</ul>
-				<div style="padding-top:15px;text-align:center;font-size:16px;">
-					文章总数：<%- site.posts.length %> 篇（ <%- totalcount(site) %>字）
-				</div>
 			</div>
 			<script>
 			$.sidebarMenu($('.sidebar-menu'))
