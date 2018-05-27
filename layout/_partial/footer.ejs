@@ -1,21 +1,20 @@
 <footer class="footer">
     <div class="top">
         <p>
-            <span><i class="icon icon-lg icon-rss"></i></span>
-            <span>博客内容属于原创创作，未授权转载者必追究其法律责任。
+            <% if ((config.feed) && (config.feed.path.length)) { %>
+                <span><a href="<%- url_for(config.feed.path) %>" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss" aria-hidden="true"></i></a></span>
+            <% } %>
+            <%- partial('plugins/site-visit') %>
         </p>
-        <%- partial('plugins/site-visit') %>
     </div>
     <div class="bottom">
-        <p>
+        <p><span><%- config.author %> &copy; <%if (theme.since_year && theme.since_year < date(new Date(), 'YYYY')) {%><%- theme.since_year %> - <%}%><%- date(new Date(), 'YYYY') %></span>
             <span>
-                黑客是如何开始他们的下午？
-                <i class="icon icon-heart-o" style="font-weight: bold;"></i>
-                <%-config.title %> &copy; <%if (theme.since_year && theme.since_year < date(new Date(), 'YYYY')) {%>
-                <%- theme.since_year %> - <%}%><%- date(new Date(), 'YYYY') %>
-
-                <!--Power by <a href="http://hexo.io/" target="_blank">Hexo</a>-->
-             </span>
+                <% if (theme.ICP_license) { %>
+                <a href="http://www.miitbeian.gov.cn/" target="_blank"><%- theme.ICP_license %></a><br>
+                <% } %>
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/dinphy/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
         </p>
     </div>
 </footer>

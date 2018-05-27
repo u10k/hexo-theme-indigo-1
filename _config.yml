@@ -94,9 +94,9 @@ share: true
 
 # 是否开启打赏，关闭 reward: false
 reward:
-  title:                  谢谢您的鼓励，扫一扫吧(๑•ᴗ•๑)~
-  wechat:                 /img/wechat.gif     #微信，关闭设为 false
-  alipay:                 /img/alipay.gif     #支付宝，关闭设为 false
+  title: 谢谢您的鼓励，扫一扫吧(๑•ᴗ•๑)~
+  wechat: /img/wechat.gif     #微信，关闭设为 false
+  alipay: /img/alipay.gif     #支付宝，关闭设为 false
 
 # 是否开启搜索
 search: true
@@ -170,11 +170,13 @@ since_year: 2017
 # 用户页面中作者相关的描述性文字，如不需要设为 false
 about: 不忘初心,继续前行
 
-# “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
+# Show PV/UV of the website/page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
+# 增加不算子访问数量统计
 visit_counter:
-  site_uv: 总访客数：
-  site_pv: 总访问量：
-
+  enable: true
+  site_uv: <i class="fa fa-user"></i> 访问人数
+  site_pv: <i class="fa fa-eye"></i> 访问总量
 # 音乐 id，是否开启
 music: false
 musicid: 0
