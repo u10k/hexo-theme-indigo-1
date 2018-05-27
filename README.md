@@ -13,6 +13,9 @@ Material Design 风格的 Hexo 主题，基于 Hexo 3.0+ 制作。 [Preview](htt
 5. 无前端依赖的分享实现。
 6. 基于静态数据的站内搜索，无第三方侵入。
 7. 支持文章打赏。
+
+#### 以下是dinphy修改部分：[效果预览](https://dinphy.github.io)
+
 8. 更改文章页结束语样式，页脚样式。
 
 9. 更改左侧菜单栏样式，添加分类二级下拉伸缩，添加两个socail-icon。
