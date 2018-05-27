@@ -1,23 +1,29 @@
 /*!
- * Waves v0.7.4
+ * Waves v0.7.5
  * http://fian.my.id/Waves
  *
- * Copyright 2014 Alfiana E. Sibuea and other contributors
+ * Copyright 2014-2016 Alfiana E. Sibuea and other contributors
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
 
 .waves-transition (@transition) {
     -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
     transition: @transition;
 }
 
 .waves-transform(@string) {
     -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
     transform: @string;
 }
 
 .waves-box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
     box-shadow: @shadow;
 }
 
@@ -43,9 +49,13 @@
         background: rgba(0,0,0,0.1);
         @gradient: rgba(0,0,0,0.1) 0,rgba(0,0,0,.2) 40%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.4) 60%,rgba(255,255,255,0) 70%;
         background: -webkit-radial-gradient(@gradient);
+        background: -o-radial-gradient(@gradient);
+        background: -moz-radial-gradient(@gradient);
         background: radial-gradient(@gradient);
         .waves-transition(all 0.4s ease-out);
         -webkit-transition-property: -webkit-transform, opacity;
+        -moz-transition-property: -moz-transform, opacity;
+        -o-transition-property: -o-transform, opacity;
         transition-property: transform, opacity;
         .waves-transform(scale(0) translate(0,0));
         pointer-events: none;
@@ -55,6 +65,8 @@
         background: rgba(255,255,255,0.4);
         @gradient: rgba(255,255,255,0.2) 0,rgba(255,255,255,.3) 40%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.5) 60%,rgba(255,255,255,0) 70%;
         background: -webkit-radial-gradient(@gradient);
+    	background: -o-radial-gradient(@gradient);
+    	background: -moz-radial-gradient(@gradient);
         background: radial-gradient(@gradient);
     }
 
@@ -74,6 +86,7 @@
 .waves-button,
 .waves-circle {
     .waves-transform(translateZ(0));
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 }
 
 .waves-button,
@@ -85,8 +98,10 @@
     cursor: pointer;
     border: none;
     outline: none;
+    color: inherit;
     background-color: rgba(0, 0, 0, 0);
     font-size: 1em;
+    line-height: 1em;
     text-align: center;
     text-decoration: none;
     z-index: 1;
