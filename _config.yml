@@ -174,8 +174,8 @@ about: 不忘初心,继续前行
 visit_counter:
 
   enable: true
-  site_uv: <i class="fa fa-area-chart"></i> &nbsp;您目前是&nbsp;
-  site_pv: <i class="fa fa-eye"></i> &nbsp;浏览总量&nbsp;
+  site_uv: <i class="fa fa-area-chart"></i> &nbsp;您目前是第&nbsp;
+  site_pv: <i class="fa fa-eye"></i> &nbsp;流量已达&nbsp;
 # 音乐 id，是否开启
 music: false
 musicid: 0
