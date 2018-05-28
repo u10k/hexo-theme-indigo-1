@@ -104,7 +104,7 @@ feed:
 # jsonContent | 用于生成静态站点数据，用作站内搜索的数据源
 ## npm install --save hexo-generator-json-content
 jsonContent:
-  meta: false
+  meta: true
   pages: false
   posts:
     title: true
