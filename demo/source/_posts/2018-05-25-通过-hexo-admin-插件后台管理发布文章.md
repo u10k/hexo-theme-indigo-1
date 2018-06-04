@@ -2,8 +2,8 @@ title: 通过 hexo-admin 插件后台管理发布文章
 author: Dinphy - 简乐
 abbrlink: 96d8dc65
 tags:
-  - 学习笔记
   - web技术
+  - hexo
 categories:
   - 学习参考
 date: 2018-05-25 15:07:00
@@ -20,7 +20,7 @@ date: 2018-05-25 15:07:00
 - 在 hexo 根目录下执行 `npm link hexo-admin`;
 - 配置 hexo 根目录下的_config.yml文件，以下代码可以在Settings里面设置了获取，在文件中加入：
 
-```bash
+```js
 # hexo-admin authentification
 admin:
   username: dinphy

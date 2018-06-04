@@ -27,7 +27,9 @@
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.2",
     "hexo-symbols-count-time": "^0.4.2",
-    "hexo-wordcount": "^3.0.2"
+    "hexo-wordcount": "^3.0.2",
+    "less": "^3.0.4",
+    "style-loader": "^0.21.0"
   },
   "devDependencies": {
     "stylus": "^0.54.5",

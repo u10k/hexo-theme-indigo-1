@@ -1,18 +1,15 @@
----
 title: Markdown 入门参考
 type: categories
-categories: 
+categories:
   - 学习参考
 tags:
   - Markdown
   - 语法
 abbrlink: '3e793072'
 visible: hide
-date: 2018/05/15 21:00:38
-updated: 2018/05/17 19:38:29
+updated: '2018/05/17 19:38:29'
+date: 2018-05-15 21:00:00
 ---
-
-
 >Markdown 学习参考
 - [Markdown | 指导文档](http://www.markdown.cn/)
 - [Editor.md | 在线编辑器](https://pandao.github.io/editor.md/examples/dynamic-create-editormd.html)
@@ -23,7 +20,7 @@ updated: 2018/05/17 19:38:29
 
 以下分别代表一至五级标题：
 
-```markdown
+```js
 #h1
 ##h2
 ###h3
@@ -34,7 +31,7 @@ updated: 2018/05/17 19:38:29
 
 在段落等内容前使用 `>` 符号，可以将这段内容标记为**引用**的内容：
 
-```markdown
+```js
 >引用内容
 >>二级引用
 ```
@@ -47,7 +44,7 @@ updated: 2018/05/17 19:38:29
 
 #### 无序列表
 
-```markdown
+```js
 * 可以作为标记
 + 也可以
 - 同样可以
@@ -69,7 +66,7 @@ updated: 2018/05/17 19:38:29
 
 #### 嵌套的列表
 
-```markdown
+```js
 1. 第一层
 	+ 1-1
 	+ 1-2
@@ -92,7 +89,7 @@ updated: 2018/05/17 19:38:29
 在代码的头部和尾部用 \`\`\` 包围起来，需要高亮的话，在 \`\`\` 包围的代码块头部标注语法的名字：
 
 
-```python
+```js
 s = 'Python syntax highlighting'
 for chr in s:
     print (s)
@@ -108,7 +105,7 @@ for chr in s:
 
 一行中使用三个即以上的 `*`、`-`、`_`来添加分隔线：
 
-```markdown
+```js
 ****
 ```
 ***
@@ -116,7 +113,7 @@ for chr in s:
 
 需要显示的文本为 [] 的内容，小括号中的链接可以是本地也可以是网络
 
-```markdown
+```js
 [Google](https://google.com)
 ```
 
@@ -126,7 +123,7 @@ for chr in s:
 
 语法与超链接基本一致，只是需要在前面加一个 !：
 
-```markdown
+```js
 ![title](https://cdn.pixabay.com/photo/2012/10/26/00/45/senegal-pechlibelle-62964_960_720.jpg)
 ```
 
@@ -144,7 +141,7 @@ for chr in s:
 
 当需要显示一些特殊的字符的时候，需要使用反斜线 `\` 来进行转义：
 
-```markdown
+```js
 这是一个*转义*的_例子_
 这是一个\*转义\*的\_例子\_
 ```
@@ -157,7 +154,7 @@ for chr in s:
 
 ### 删除线
 
-```markdown
+```js
 这是~~删除线~~
 ```
 这是~~删除线~~
@@ -166,7 +163,7 @@ for chr in s:
 
 Markdown 原生并无下划线语法，可以通过 HTML 来实现：
 
-```html
+```js
 <u>这是下划线</u>
 ```
 <u>这是下划线</u>
@@ -177,7 +174,7 @@ Markdown 原生并无下划线语法，可以通过 HTML 来实现：
 
 使用 `|` 来分隔不同单元格，使用 `-`  来分隔表头和其他行：
 
-```markdown
+```js
 | name  | age  |
 | ----- | ---- |
 | Leo   | 16   |
@@ -193,7 +190,7 @@ Markdown 原生并无下划线语法，可以通过 HTML 来实现：
 
 在表头下方的分隔线标记加入 `:`，可更换下方单元格的对齐方式：
 
-```markdown
+```js
 | left | center | right |
 | ---- | :----: | ----: |
 | left | center | right |
@@ -207,7 +204,7 @@ Markdown 原生并无下划线语法，可以通过 HTML 来实现：
 
 ### 待办事宜（hexo 不支持以下语法）
 
-```markdown
+```js
 - [ ] 吃饭
 - [x] 唱歌
 ```
@@ -256,7 +253,7 @@ Bob-->Alice: I am good thanks!
 
 用 `$$ $$` 包括起来的表示整行公式：
 
-```markdown
+```js
 $$\sum_{i=1}^n a_i=0$$
 $$f(x_1,x_x,\ldots,x_n)=x_1^2+x_2^2+\cdots+x_n^2$$
 ```
@@ -268,7 +265,7 @@ $$f(x_1,x_x,\ldots,x_n)=x_1^2+x_2^2+\cdots+x_n^2$$
 ### 脚注
 
 使用 `[^keyword]` 表示脚注：
-```markdown
+```js
 这是一个脚注[^1]的例子
 
 [^1]: 这是一个脚注 

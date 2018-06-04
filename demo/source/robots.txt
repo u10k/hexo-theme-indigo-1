@@ -1,14 +1,46 @@
+﻿User-agent: baidspider
+Disallow: /
+Disallow: /*
+Disallow: /admin
+Disallow: /categories/*
+Disallow: /tags/*
+Disallow: /archives/*
+
+User-Agent: 360Spider
+Disallow: /admin
+Disallow: /categories/*
+Disallow: /tags/*
+Disallow: /archives/*
+
+User-Agent: Sogouspider
+Disallow: /admin
+Disallow: /categories/*
+Disallow: /tags/*
+Disallow: /archives/*
+
+User-Agent: Yahoo! Slurp
+Disallow: /admin
+Disallow: /categories/*
+Disallow: /tags/*
+Disallow: /archives/*
+
+User-Agent: Yisouspider
+Disallow: /admin
+Disallow: /categories/*
+Disallow: /tags/*
+Disallow: /archives/*
+
+User-agent: Bingbot
+Disallow: /admin
+Disallow: /categories/*
+Disallow: /tags/*
+Disallow: /archives/*
+
 User-agent: *
-Allow: /
-Allow: /archives/
-Allow: /tags/
-Allow: /page/
-Allow: /posts/
-Allow: /menu/
-Allow: /categories/业余小作/
-Allow: /categories/学习笔记/
-Allow: /css/
-Allow: /img/
-Allow: /js/
+Disallow: /*
+Disallow: /admin
+Disallow: /categories/*
+Disallow: /tags/*
+Disallow: /archives/*
 
 Sitemap: https://dinphy.github.io/sitemap.xml
